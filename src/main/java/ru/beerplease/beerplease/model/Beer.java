@@ -16,4 +16,6 @@ public class Beer {
     private String name;
     private String title;
     private String description;
+    private Float alcoholByVolume;
+    private Integer bitterness;
 }
