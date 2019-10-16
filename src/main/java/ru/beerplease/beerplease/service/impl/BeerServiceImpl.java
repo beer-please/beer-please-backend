@@ -24,6 +24,6 @@ public class BeerServiceImpl implements BeerService {
 
     @Override
     public Beer getBeerByBarcode(String barcode) {
-        return null;
+        return beerRepository.findBeerByBarcode(barcode).orElseThrow(() -> new BeerNotFoundException(barcode));
     }
 }

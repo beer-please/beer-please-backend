@@ -23,4 +23,9 @@ public class BeerController {
     public ResponseEntity<Beer> getBeerById(@PathVariable Long id) {
         return ResponseEntity.ok(beerService.getBeerById(id));
     }
+
+    @GetMapping("barcode/{barcode}")
+    public ResponseEntity<Beer> getBeerByBarcode(@PathVariable String barcode) {
+        return ResponseEntity.ok(beerService.getBeerByBarcode(barcode));
+    }
 }
